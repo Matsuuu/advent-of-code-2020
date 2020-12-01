@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mvn -Dtest=TestDay$1 test -q -Dsurefire.printSummary=false 
