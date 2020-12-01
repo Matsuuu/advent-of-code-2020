@@ -12,7 +12,7 @@ public class DayOne {
     public void solve() {
         List<String> allLines;
         try {
-            allLines = Files.readAllLines(Path.of("input.txt"));
+            allLines = Files.readAllLines(Path.of("inputs/day-one-input.txt"));
         } catch (IOException e) {
             e.printStackTrace();
             return;
