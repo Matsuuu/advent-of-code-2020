@@ -2,6 +2,10 @@ package org.matsu;
 
 import java.util.Arrays;
 import java.util.List;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
 
 public class Util {
 
@@ -28,5 +32,15 @@ public class Util {
                 i = 0;
         }
         System.out.print("\n");
+    }
+
+    public static List<String> readInputToArray(String fileName) {
+        List<String> allLines = new ArrayList<>();
+        try {
+            allLines = Files.readAllLines(Path.of(fileName));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return allLines;
     }
 }

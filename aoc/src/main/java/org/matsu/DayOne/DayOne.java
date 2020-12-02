@@ -5,19 +5,15 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.matsu.Util;
+
 import static org.matsu.Util.log;
 
 public class DayOne {
 
     public void solve() {
-        List<String> allLines;
-        try {
-            allLines = Files.readAllLines(Path.of("inputs/day-one-input.txt"));
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        }
-
+        List<String> allLines = Util.readInputToArray("inputs/day-one-input.txt");
         List<Integer> lineNumbers = new ArrayList<>();
 
         for (String line : allLines) {
