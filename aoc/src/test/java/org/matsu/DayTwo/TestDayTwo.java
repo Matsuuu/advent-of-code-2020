@@ -8,7 +8,7 @@ public class TestDayTwo {
     @Test
     public void runTest() {
         log("");
-        log("🎄 🎄 Running testing for Day Two 🎄 🎄");
+        log("🎄 🎄 Running test solution for Day Two 🎄 🎄");
         log("");
 
         DayTwo d = new DayTwo();

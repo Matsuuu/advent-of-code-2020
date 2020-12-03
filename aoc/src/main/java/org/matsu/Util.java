@@ -34,7 +34,7 @@ public class Util {
         System.out.print("\n");
     }
 
-    public static List<String> readInputToArray(String fileName) {
+    public static List<String> readInputToList(String fileName) {
         List<String> allLines = new ArrayList<>();
         try {
             allLines = Files.readAllLines(Path.of(fileName));

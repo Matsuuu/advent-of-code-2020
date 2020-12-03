@@ -1,8 +1,5 @@
 package org.matsu.DayOne;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +10,7 @@ import static org.matsu.Util.log;
 public class DayOne {
 
     public void solve() {
-        List<String> allLines = Util.readInputToArray("inputs/day-one-input.txt");
+        List<String> allLines = Util.readInputToList("inputs/day-one-input.txt");
         List<Integer> lineNumbers = new ArrayList<>();
 
         for (String line : allLines) {

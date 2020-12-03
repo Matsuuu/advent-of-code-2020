@@ -1,17 +1,17 @@
-package org.matsu.DayOne;
+package org.matsu.DayThree;
 
 import org.junit.Test;
 import static org.matsu.Util.log;
 
-public class TestDayOne {
+public class TestDayThree {
 
     @Test
     public void runTest() {
         log("");
-        log("🎄 🎄 Running test solution for Day One 🎄 🎄");
+        log("🎄 🎄 Running test solution for Day Three 🎄 🎄");
         log("");
 
-        DayOne d = new DayOne();
+        DayThree d = new DayThree();
         d.solve();
 
         log("");

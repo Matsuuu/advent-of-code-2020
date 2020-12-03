@@ -34,7 +34,7 @@ public class DayTwo {
     }
 
     public void solve() {
-        List<String> allLines = Util.readInputToArray("inputs/day-two-input.txt");
+        List<String> allLines = Util.readInputToList("inputs/day-two-input.txt");
 
         int validCount = solveFirst(allLines);
         log("Valid passwords: ", validCount);
