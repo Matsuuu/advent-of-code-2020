@@ -43,4 +43,14 @@ public class Util {
         }
         return allLines;
     }
+
+    public static String readInputToString(String fileName) {
+        String fileString = "";
+        try {
+            fileString = Files.readString(Path.of(fileName));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return fileString;
+    }
 }
