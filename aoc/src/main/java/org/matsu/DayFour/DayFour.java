@@ -94,7 +94,7 @@ public class DayFour {
         String input = Util.readInputToString("inputs/day-four-input.txt");
 
         List<String> list = Arrays.asList(input.split("\n\n"));
-        List<Passport> passports = list.stream().map(l -> new Passport(l)).collect(Collectors.toList());
+        List<Passport> passports = list.stream().map(Passport::new).collect(Collectors.toList());
 
         List<Passport> validPassports = passports.stream().filter(Passport::isValid).collect(Collectors.toList());
         long firstValidCount = validPassports.size();
