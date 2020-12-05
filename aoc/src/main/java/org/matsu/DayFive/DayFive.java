@@ -62,11 +62,10 @@ public class DayFive {
         long colMax = 7;
         String colString = line.substring(7);
         for (String c : colString.split("")) {
-            if (c.equals("L")) {
+            if (c.equals("L"))
                 colMax = (long) (Math.floor(colMax - (colMax - colMin) / 2.0));
-            } else {
+            else
                 colMin = (long) (Math.ceil(colMax - (colMax - colMin) / 2.0));
-            }
         }
         return new Seat(rowMax, colMax, rowMax * 8 + colMax);
     }
