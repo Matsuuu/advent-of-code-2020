@@ -19,7 +19,6 @@ public class DaySix {
         public Group(String groupInput) {
             List<String> passengers = Arrays.asList(groupInput.split("\n"));
             Map<String, Integer> answers = new HashMap<>();
-            log("Groupinput: ", groupInput);
 
             passengers.forEach(p -> {
                 Arrays.asList(p.split("")).forEach(c -> {
@@ -30,8 +29,6 @@ public class DaySix {
 
             yesAnswerCount = answers.size();
             allAgreeCount = answers.entrySet().stream().filter(e -> e.getValue() == passengers.size()).count();
-            log("Yes answer count: ", yesAnswerCount);
-            log("All answer count: ", allAgreeCount);
         }
     }
 
