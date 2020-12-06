@@ -13,16 +13,25 @@ import org.matsu.Util;
 public class DaySix {
 
     private class Group {
-        public int yesAnswerCount;
+        public long yesAnswerCount;
+        public long allAgreeCount;
 
         public Group(String groupInput) {
-            Map<String, Boolean> seen = new HashMap<>();
-            for (String c : groupInput.replaceAll("\n", "").split("")) {
-                if (!seen.containsKey(c)) {
-                    seen.put(c, true);
-                }
-            }
-            yesAnswerCount = seen.size();
+            List<String> passengers = Arrays.asList(groupInput.split("\n"));
+            Map<String, Integer> answers = new HashMap<>();
+            log("Groupinput: ", groupInput);
+
+            passengers.forEach(p -> {
+                Arrays.asList(p.split("")).forEach(c -> {
+                    answers.putIfAbsent(c, 0);
+                    answers.put(c, answers.get(c) + 1);
+                });
+            });
+
+            yesAnswerCount = answers.size();
+            allAgreeCount = answers.entrySet().stream().filter(e -> e.getValue() == passengers.size()).count();
+            log("Yes answer count: ", yesAnswerCount);
+            log("All answer count: ", allAgreeCount);
         }
     }
 
@@ -30,7 +39,9 @@ public class DaySix {
         String input = Util.readInputToString("inputs/day-six-input.txt");
 
         List<Group> groups = Arrays.asList(input.split("\n\n")).stream().map(Group::new).collect(Collectors.toList());
-        int total = groups.stream().collect(Collectors.summingInt(g -> g.yesAnswerCount));
+        long total = groups.stream().collect(Collectors.summingLong(g -> g.yesAnswerCount));
+        long allAgree = groups.stream().collect(Collectors.summingLong(g -> g.allAgreeCount));
         log("Total: ", total);
+        log("All agree count: ", allAgree);
     }
 }
