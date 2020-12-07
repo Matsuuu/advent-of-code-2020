@@ -48,7 +48,7 @@ pale lavender bags contain 2 pale gray bags, 3 dotted violet bags, 2 striped lav
 dim coral bags contain 4 bright black bags, 1 shiny tan bag, 1 faded chartreuse bag, 1 bright silver bag.
 muted purple bags contain 2 wavy yellow bags.
 pale chartreuse bags contain 3 dotted red bags, 4 striped salmon bags, 4 pale brown bags, 2 dull yellow bags.
-ligh red bags contain 3 bright crimson bags.
+light red bags contain 3 bright crimson bags.
 bright green bags contain 2 plaid fuchsia bags, 5 light lavender bags, 3 dotted cyan bags.
 plaid purple bags contain 4 wavy tan bags, 5 plaid teal bags, 5 dull teal bags, 1 shiny gold bag.
 vibrant gray bags contain 1 dull beige bag.
