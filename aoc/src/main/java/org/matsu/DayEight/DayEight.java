@@ -17,7 +17,6 @@ public class DayEight {
 
         checkForFirstRepeat(lines);
         log("");
-        reset();
         fixBootloop(lines);
     }
 
@@ -49,6 +48,7 @@ public class DayEight {
         int attemptedPointer = 0;
         while (true) {
             try {
+                reset();
                 List<String> linesCopy = new ArrayList<>();
                 linesCopy.addAll(lines);
                 for (int i = attemptedPointer; i < linesCopy.size(); i++) {
@@ -70,7 +70,6 @@ public class DayEight {
                 runGame(linesCopy);
 
                 attemptedPointer++;
-                reset();
                 log("");
             } catch (Exception e) {
                 e.printStackTrace();
